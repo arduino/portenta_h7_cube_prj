@@ -190,7 +190,6 @@ int main(void)
   /* USER CODE BEGIN Init */
   MX_GPIO_Init();
 
-  /* USER CODE END Init */
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -257,7 +256,7 @@ HSEM notification */
   MX_TIM12_Init();
   /* USER CODE BEGIN 2 */
 
-char data[2];
+  char data[2];
 
   // LDO2 to 1.8V
   data[0]=0x4F;
