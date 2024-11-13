@@ -4,9 +4,9 @@ This repo contains an STM32Cube project tailored for Arduino Portenta H7 board.
 
 Beside the pinmuxing and correct clock configuration, we added some code in main.c to properly initialize the board:
 
-* Initialize clock main.c#L213
-* Take USB ULPI chip out of reset main.c#L215
-* Initialize PMIC rails main.c#L270-L336
+* [Initialize clock by taking its pin out of reset](CM7/Core/Src/main.c#L211-L213)
+* [Take USB ULPI chip out of reset](CM7/Core/Src/main.c#L340-L345)
+* [Initialize PMIC rails](CM7/Core/Src/main.c#L270-L336)
 
 ## Known limitations
 * Creating a project will generate a non compiling makefile; use the following patch to fix it
