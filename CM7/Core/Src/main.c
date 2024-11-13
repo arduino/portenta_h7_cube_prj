@@ -188,7 +188,7 @@ int main(void)
   while((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) != RESET) && (timeout-- > 0));
   if ( timeout < 0 )
   {
-  Error_Handler();
+  //Error_Handler();
   }
 /* USER CODE END Boot_Mode_Sequence_1 */
   /* MCU Configuration--------------------------------------------------------*/
@@ -258,7 +258,6 @@ HSEM notification */
   MX_UART8_Init();
   MX_USART6_UART_Init();
   MX_SAI4_Init();
-  MX_SDMMC2_SD_Init();
   MX_TIM1_Init();
   MX_TIM3_Init();
   MX_TIM8_Init();
@@ -351,8 +350,6 @@ HSEM notification */
   osKernelInitialize();
 
   /* USER CODE BEGIN RTOS_MUTEX */
-  //MX_SDMMC1_SD_Init();
-  MX_SDMMC2_SD_Init();
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
