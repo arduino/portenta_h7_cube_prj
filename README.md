@@ -28,4 +28,4 @@ Beside the pinmuxing and correct clock configuration, we added some code in main
   > -L../../Middlewares/ST/STM32_Audio/Addons/PDM/Lib
   ```
 * I2S2 and SPI2 cannot be configured together; the pinux is however already prepared (if you need to use I2S2)
-* 
+* SDMMC{1/2} are not initilized at startup since they fail if the SDCARD is not inserted. Call `MX_SDMMC1_MMC_Init` or `MX_SDMMC2_SD_Init` manually if you know what you are doing
